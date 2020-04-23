@@ -74,9 +74,10 @@
     {% for blog in blogs %}
     
     <a href=""><h3>{{blog.title}}</h3></a>
-    <img src="{{blog.image.url}}" alt="Coming Soon" height="100" width="100"> <br>
-    {{blog.publish_date}}
-    <br> <br>
+    <img src="{{blog.image.url}}" alt="Coming Soon" height="200" width="200" class="img-fluid"> <br>
+    {{blog.publish_date_pretty}}
+    <br>
+    <p>{{blog.summary}}</p>
 
     {% endfor %}
   </div>

@@ -11,3 +11,12 @@ class Blog(models.Model):
     publish_date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to = 'images/')
     body = models.TextField()
+
+    def summary(self):
+        return self.body[:100]
+    
+    def publish_date_pretty(self):
+        return self.publish_date.strftime('%b %e, %Y')
+
+    def __str__(self):
+        return self.title
