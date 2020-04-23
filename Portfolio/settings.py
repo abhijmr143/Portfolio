@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 temp_dir = os.path.join(BASE_DIR, 'templates')
-Image_file = os.path.join(BASE_DIR, 'media')
+mdeia = os.path.join(BASE_DIR, 'media')
 static_dir = os.path.join(BASE_DIR, 'static')
 
 # Quick-start development settings - unsuitable for production
