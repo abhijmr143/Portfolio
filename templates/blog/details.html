@@ -10,6 +10,7 @@
     <title>Blog Portal</title>
 
     <link rel="stylesheet" href="/home/abhishek/Django_Learning/Portfolio/static/blog_css">
+    <link rel="stylesheet" href="/home/abhishek/Django_Learning/Portfolio/static">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -70,19 +71,16 @@
 
 <main role="main">
   <div class="container">
-    <h1 class="text-center">Abhishek's blogs</h1> <br> <br>
-    <h2>Latest Post</h2>
+      
+    <h1 class="text-center pt-3">{{ blogs.title }}</h1> <br> 
+    <p class="text-center">{{blogs.publish_date}}</p>
     <hr>
-    {% for blog in blogs %}
-    
-    <a href="{% url 'detail' blog.id %}"><h3>{{blog.title}}</h3></a>
-    <img src="{{blog.image.url}}" alt="Coming Soon" height="200" width="200" class="img-fluid"> <br>
-   
-    {{blog.publish_date_pretty}}
+    <img  class="img-fluid" src="{{blogs.image.url}}" alt="Coming Soon">
     <br>
-    <p>{{blog.summary}}</p>
+  
+    <hr>
+    <p>{{blogs.body}}</p>
 
-    {% endfor %}
   </div>
 </main>
 

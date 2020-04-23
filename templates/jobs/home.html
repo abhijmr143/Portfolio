@@ -1,5 +1,6 @@
 
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -7,7 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Album example · Bootstrap</title>
+    <title>Abhishek's Blog</title>
+
+    <link rel="stylesheet" href="/home/abhishek/Django_Learning/Portfolio/static/job_css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -54,14 +57,14 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Abhishek</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Abhishek</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-nav ml-auto">
-                  <a class="nav-link" href="#">Twitter</a>
-                  <a class="nav-link" href="#">Blog</a>               
-                  <a class="nav-link" href="#">Resume</a>
+                  <a class="nav-link" href="https://www.facebook.com/abhijmr3388">Facebook</a>
+                  <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>               
+                  <a class="nav-link" href="{% static 'abhishek.pdf' %}">Resume</a>  
             </div>
           </nav>
 </header>
@@ -71,11 +74,12 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1>Hi I'm Abhishek</h1>
-      <p class="lead text-muted">Hi I'm Abhishek Dubey, I'm From India This is My First Website</p>
+      <p class="lead text-muted">Hi I'm Abhishek Dubey, I'm From India</p>
       <p>
-        <a href="mailto:abhishek.ash0406@gmail.com" class="btn btn-primary btn-success btn-lg">E-mail</a>
+        <a href="mailto:abhishek.ash0406@gmail.com" class="btn btn-primary btn-success btn-lg">e-mail me</a>
         <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
       </p>
+      <img src="{% static 'abhishek.jpg' %}" alt="coming soon" height="100" width="100" class="img-fluid">
     </div>
   </section>
 
@@ -115,7 +119,7 @@
     <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
     <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p> -->
 
-    &copy; Abhishek, {% now 'Y' %}
+    &copy; Abhishek Dubey, {% now 'Y' %}
 </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
