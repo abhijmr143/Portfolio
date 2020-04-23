@@ -60,51 +60,26 @@
             </button>
             <div class="navbar-nav ml-auto">
                   <a class="nav-link" href="#">Twitter</a>
-                  <a class="nav-link" href="#">Blog</a>               
-                  <a class="nav-link" href="#">Resume</a>
+                  <a class="nav-link" href="#">Resume</a>               
+                  <a class="nav-link active" href="#">Blog</a>
             </div>
           </nav>
 </header>
 
 <main role="main">
+  <div class="container">
+    <h1 class="text-center">Abhishek's blogs</h1> <br> <br>
+    <h2>Latest Post</h2>
+    <hr>
+    {% for blog in blogs %}
+    
+    <a href=""><h3>{{blog.title}}</h3></a>
+    <img src="{{blog.image.url}}" alt="Coming Soon" height="100" width="100"> <br>
+    {{blog.publish_date}}
+    <br> <br>
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Hi I'm Abhishek</h1>
-      <p class="lead text-muted">Hi I'm Abhishek Dubey, I'm From India This is My First Website</p>
-      <p>
-        <a href="mailto:abhishek.ash0406@gmail.com" class="btn btn-primary btn-success btn-lg">E-mail</a>
-        <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
-      </p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-          {% for job in jobs_data %}
-
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <!-- <svg class="bd-placeholder-img card-img-top" sr></svg> -->
-              <div class="col-md-3 col-lg-12">
-              <img src="{{job.image.url}}" class="bd-placeholder-img card-img-top" alt="Coming soon">
-              </div>
-              <div class="card-body">
-                <p class="card-text">{{job.summary}}</p>
-              
-                  <!-- <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small> -->
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-             </div>
-          </div>
-        </div>
+    {% endfor %}
+  </div>
 </main>
 
 <footer class="text-muted">
